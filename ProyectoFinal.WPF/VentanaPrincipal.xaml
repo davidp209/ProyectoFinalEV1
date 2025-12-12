@@ -1,0 +1,45 @@
+﻿<Window x:Class="ProyectoFinal.WPF.VentanaPrincipal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Panel de Control - Coches" Height="600" Width="900" 
+        WindowStartupLocation="CenterScreen" Background="#F0F2F5">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="0,0,0,20">
+            <TextBlock Text="Listado de Vehículos" FontSize="24" FontWeight="Bold" Foreground="#333"/>
+            <TextBlock Text="Gestiona tu inventario en tiempo real" FontSize="14" Foreground="#777" Margin="0,5,0,15"/>
+
+            <StackPanel Orientation="Horizontal">
+                <Button Content="➕ Nuevo Coche" Width="130" Height="35" Background="#28A745" Foreground="White" FontWeight="Bold" Margin="0,0,10,0" Click="BtnNuevo_Click" Cursor="Hand"/>
+
+                <Button Content="✏️ Editar" Width="100" Height="35" Background="#FFC107" Foreground="Black" FontWeight="Bold" Margin="0,0,10,0" Click="BtnEditar_Click" Cursor="Hand"/>
+
+                <Button Content="🗑️ Eliminar" Width="100" Height="35" Background="#DC3545" Foreground="White" FontWeight="Bold" Margin="0,0,10,0" Click="BtnBorrar_Click" Cursor="Hand"/>
+
+                <Rectangle Width="1" Fill="#CCC" Margin="10,5"/>
+
+                <Button Content="🔄 Refrescar" Width="100" Height="35" Click="BtnRefrescar_Click" Margin="10,0,0,0"/>
+
+                <Button Content="🚪 Salir" Width="80" Height="35" Background="#6C757D" Foreground="White" FontWeight="Bold" Click="BtnSalir_Click" Cursor="Hand"/>
+            </StackPanel>
+        </StackPanel>
+
+        <DataGrid x:Name="gridCoches" Grid.Row="1" AutoGenerateColumns="True" IsReadOnly="True" 
+                  AlternatingRowBackground="#E9ECEF" RowBackground="White" GridLinesVisibility="Horizontal"
+                  BorderThickness="1" BorderBrush="#DDD" HeadersVisibility="Column">
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="Background" Value="#343A40"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="Padding" Value="10,8"/>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+        </DataGrid>
+    </Grid>
+</Window>

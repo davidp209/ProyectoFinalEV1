@@ -1,0 +1,33 @@
+﻿<Window x:Class="ProyectoFinal.WPF.VentanaCrear"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Añadir Nuevo Coche" Height="550" Width="450" 
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+
+    <Grid Margin="20">
+        <StackPanel>
+            <TextBlock Text="Datos del Vehículo" FontSize="18" FontWeight="Bold" Margin="0,0,0,20" HorizontalAlignment="Center"/>
+
+            <TextBlock Text="Marca:" FontWeight="Bold" Margin="0,5,0,0"/>
+            <TextBox x:Name="txtMarca" Height="28" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Modelo:" FontWeight="Bold" Margin="0,5,0,0"/>
+            <TextBox x:Name="txtModelo" Height="28" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Precio (€):" FontWeight="Bold" Margin="0,5,0,0"/>
+            <TextBox x:Name="txtPrecio" Height="28" Margin="0,0,0,10"/>
+            
+            <TextBlock Text="Año(2025):" FontWeight="Bold" Margin="0,5,0,0"/>
+            <TextBox x:Name="txtAnio" Height="28" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Caballos:" FontWeight="Bold" Margin="0,5,0,0"/>
+            <TextBox x:Name="txtCaballos" Height="28" Margin="0,0,0,10"/>
+            
+            <TextBlock Text="Tiempo0a60:" FontWeight="Bold"/>
+            <TextBox x:Name="txtTiempo0a60" Height="28" Margin="0,0,0,10"/>
+
+
+            <Button Content="GUARDAR COCHE" Height="40" Background="#28A745" Foreground="White" FontWeight="Bold" Click="BtnGuardar_Click" Cursor="Hand"/>
+        </StackPanel>
+    </Grid>
+</Window>
