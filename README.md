@@ -29,10 +29,6 @@ El objetivo principal es permitir el control total (CRUD) sobre el stock de veh�
 * **Arquitectura:** MVVM (Model-View-ViewModel)
 * **IDE:** Visual Studio 2022
 
-## 📸 Capturas de Pantalla
-
-*(Aquí puedes poner una captura de tu DataGrid con los coches)*
-![Screenshot de la App](https://via.placeholder.com/800x400?text=Captura+de+la+Aplicacion)
 
 ## 🚀 Instalación y Uso
 
